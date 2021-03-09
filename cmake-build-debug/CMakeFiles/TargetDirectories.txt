@@ -1,0 +1,3 @@
+/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/cmake-build-debug/CMakeFiles/Tarea_Extraclase_I_DII_Collector_.dir

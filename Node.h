@@ -7,6 +7,7 @@
 
 
 class Node {
+public:
     int value= nullptr;
     Node *next = nullptr;
     void setValue(int _value);

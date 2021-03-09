@@ -8,9 +8,9 @@
 
 class List {
     Node *firts=nullptr;
-    void insert(int value);
-    void delete(int value);
-    void showFirts(int value);
+    void insert(int _value);
+    void deleteElement(int _value);
+    void show();
 };
 
 

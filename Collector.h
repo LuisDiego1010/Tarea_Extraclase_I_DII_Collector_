@@ -1,0 +1,14 @@
+//
+// Created by diegoubuntu on 9/3/21.
+//
+
+#ifndef TAREA_EXTRACLASE_I_DII_COLLECTOR__COLLECTOR_H
+#define TAREA_EXTRACLASE_I_DII_COLLECTOR__COLLECTOR_H
+
+
+class Collector {
+
+};
+
+
+#endif //TAREA_EXTRACLASE_I_DII_COLLECTOR__COLLECTOR_H

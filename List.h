@@ -7,10 +7,11 @@
 #include "Node.h"
 
 class List {
+public:
     Node *firts=nullptr;
-    void insert(int _value);
     void deleteElement(int _value);
-    void show();
+    void showElement();
+    void insert(int _value);
 };
 
 

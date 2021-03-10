@@ -7,7 +7,7 @@
 using namespace std;
 
 void Node::setValue(int _value) {
-    value=_value
+    value=_value;
 }
 int Node::getValue() {
     return value;

@@ -28,9 +28,20 @@ void List::deleteElement(int _value) {
             temp=temp->next;
         }
         if (temp== nullptr){
+            cout<<"The item is not in the list"<<endl;
             return;
         }
         prev->next=temp->next;
         delete temp;
+    }
+}
+void List::showElement() {
+    if (firts==nullptr){
+        cout<<"The list is empty";
+    }
+    Node *temp=firts;
+    while (temp!= nullptr){
+        cout<<temp->value<<endl;
+        temp=temp->next;
     }
 }

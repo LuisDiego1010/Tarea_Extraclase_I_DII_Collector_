@@ -1,1 +1,4 @@
-CMakeLists.txt not found in /home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_ Select CMakeLists.txt
+/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/cmake-build-debug

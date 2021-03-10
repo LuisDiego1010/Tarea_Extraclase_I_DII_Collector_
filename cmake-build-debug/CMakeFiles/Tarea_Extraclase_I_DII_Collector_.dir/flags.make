@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/." 
+CXX_INCLUDES = 
 

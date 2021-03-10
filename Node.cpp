@@ -7,10 +7,10 @@
 using namespace std;
 
 void Node::setValue(int _value) {
-    value=_value;
+    *value=_value;
 }
 int Node::getValue() {
-    return value;
+    return *value;
 }
 void Node::setNext(Node _next) {
     *next=_next;

@@ -5,6 +5,6 @@ using namespace std;
 #include "List.h"
 #include "List.cpp"
 int main() {
-    List List1;
-    List1.insert(0);
+    List *List1 = new List();
+    List1->insert(0);
 }

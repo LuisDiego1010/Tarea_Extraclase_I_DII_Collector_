@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Tarea_Extraclase_I_DII_Collector_.dir/main.cpp.o CMakeFiles/Tarea_Extraclase_I_DII_Collector_.dir/Node.cpp.o CMakeFiles/Tarea_Extraclase_I_DII_Collector_.dir/List.cpp.o  -o Tarea_Extraclase_I_DII_Collector_ 
+/usr/bin/c++  -g   CMakeFiles/Tarea_Extraclase_I_DII_Collector_.dir/main.cpp.o  -o Tarea_Extraclase_I_DII_Collector_ 

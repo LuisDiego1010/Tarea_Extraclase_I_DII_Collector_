@@ -82,18 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/List.cpp">
-			<Option target="Tarea_Extraclase_I_DII_Collector_"/>
-		</Unit>
-		<Unit filename="/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/List.h">
-			<Option target="Tarea_Extraclase_I_DII_Collector_"/>
-		</Unit>
-		<Unit filename="/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/Node.cpp">
-			<Option target="Tarea_Extraclase_I_DII_Collector_"/>
-		</Unit>
-		<Unit filename="/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/Node.h">
-			<Option target="Tarea_Extraclase_I_DII_Collector_"/>
-		</Unit>
 		<Unit filename="/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/main.cpp">
 			<Option target="Tarea_Extraclase_I_DII_Collector_"/>
 		</Unit>

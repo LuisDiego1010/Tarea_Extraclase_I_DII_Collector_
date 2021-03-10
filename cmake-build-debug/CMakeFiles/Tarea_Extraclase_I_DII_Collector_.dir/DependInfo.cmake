@@ -4,8 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/List.cpp" "/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/cmake-build-debug/CMakeFiles/Tarea_Extraclase_I_DII_Collector_.dir/List.cpp.o"
-  "/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/Node.cpp" "/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/cmake-build-debug/CMakeFiles/Tarea_Extraclase_I_DII_Collector_.dir/Node.cpp.o"
   "/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/main.cpp" "/home/diegoubuntu/Universidad/Datos II/Tareas Extraclase/Tarea_Extraclase_I_DII_Collector_/cmake-build-debug/CMakeFiles/Tarea_Extraclase_I_DII_Collector_.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

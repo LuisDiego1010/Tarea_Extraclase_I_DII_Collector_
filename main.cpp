@@ -15,8 +15,8 @@ public:
 
     void setValue(int _value);
     int getValue();
-    void setNext(Node _next);
-    Node getNext();
+    void setNext(Node *_next);
+    Node* getNext();
     void* operator new (size_t nodeNew);
     void operator delete (void* nodeDel);
 };
@@ -29,22 +29,12 @@ int Node::getValue() {
     return *value;
 }
 
-void Node::setNext(Node _next) {
-    *next=_next;
+void Node::setNext(Node *_next) {
+    next=_next;
 }
 
-Node Node::getNext() {
-    return *next;
-}
-
-void* Node::operator new(size_t nodeNew){
-    //Lógica del new
-    //Crear constructor y si está vacio que llame al constructor
-}
-
-
-void Node::operator delete(void* nodeDel){
-    //Lógica del delete Pasarle el puntero al collector
+Node* Node::getNext() {
+    return next;
 }
 
 class List {
@@ -66,7 +56,7 @@ void List::deleteElement(int _value) {
     }else{
         Node *temp=firts, *prev= nullptr; //Auxiliar Nodes
         if(temp!= nullptr && *temp->value==_value){
-            *firts=temp->getNext();
+            firts=temp->getNext();
             return;
         }
         while (temp!= nullptr && *temp->value!=_value){ //Scroll through the list to find the item
@@ -90,7 +80,7 @@ void List::showElement() {
     Node *temp=firts;
     while (temp!= nullptr){
         cout<<"["<<i<<"]->"<<*temp->value<<endl;
-        *temp=temp->getNext();
+        temp=temp->getNext();
         i++;
     }
 }
@@ -98,30 +88,54 @@ void List::showElement() {
 
 class Collector {
 public:
-    Node *firts=nullptr;
-    long isEmpty();
-    void insertCollector(Node _nodeC);
-    void getCollector();
-    void showCollector();
+    static Node *firts;
+    static long isEmpty();
+    static void insertCollector(Node* _nodeC);
+    static void showCollector();
 };
+Node* Collector::firts= nullptr;
+
+Node * Collector::getFirts() {
+    Node *temp = firts;
+    firts=firts->getNext();
+    temp->setNext(nullptr);
+    return temp;
+}
 
 long Collector::isEmpty() {
     if (firts==nullptr){
         return NULL;
     }
 }
-
+void Collector::insertCollector(Node* _nodeC) {
+    _nodeC->next=firts;
+    firts=_nodeC;
+}
 void Collector::showCollector() {
     int i=0;
     if (firts==nullptr){
-        cout<<"The list is empty"<<endl;
+        cout<<"The collector is empty"<<endl;
     }
     Node *temp=firts;
     while (temp!= nullptr){
-        cout<<"["<<i<<"]->"<<*temp->value<<endl;
-        *temp=temp->getNext();
+        cout<<"("<<i<<")->"<<*temp->value<<endl;
+        temp=temp->getNext();
         i++;
     }
+}
+
+void* Node::operator new(size_t nodeNew){
+    //Lógica del new
+    if (Collector::isEmpty()==NULL){
+        return ::new Node(0);
+    }else{
+        Collector::getFirts();
+    }
+}
+
+
+void Node::operator delete(void* nodeDel){
+   Collector::insertCollector(static_cast<Node *>(nodeDel));
 }
 
 int main() {
@@ -129,14 +143,14 @@ int main() {
     List1->insert(10);
     List1->insert(20);
     List1->insert(30);
-    List1->insert(40);
-    List1->insert(50);
-
-    List1->deleteElement(10);
-    List1->deleteElement(10);
-    List1->deleteElement(10);
-    List1->deleteElement(30);
 
     List1->showElement();
-    cout<<"Finish";
+
+    List1->deleteElement(10);
+    List1->insert(40);
+
+    List1->deleteElement(20);
+    Collector::showCollector();
+
+
 }

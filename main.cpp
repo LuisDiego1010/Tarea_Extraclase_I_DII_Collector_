@@ -57,6 +57,7 @@ void List::deleteElement(int _value) {
         Node *temp=firts, *prev= nullptr; //Auxiliar Nodes
         if(temp!= nullptr && *temp->value==_value){
             firts=temp->getNext();
+            delete temp;
             return;
         }
         while (temp!= nullptr && *temp->value!=_value){ //Scroll through the list to find the item
@@ -89,6 +90,7 @@ void List::showElement() {
 class Collector {
 public:
     static Node *firts;
+    static Node* getFirts();
     static long isEmpty();
     static void insertCollector(Node* _nodeC);
     static void showCollector();
@@ -140,17 +142,14 @@ void Node::operator delete(void* nodeDel){
 
 int main() {
     List *List1 = new List();
-    List1->insert(10);
-    List1->insert(20);
     List1->insert(30);
-
     List1->showElement();
-
-    List1->deleteElement(10);
-    List1->insert(40);
-
-    List1->deleteElement(20);
+    List1->deleteElement(30);
+    List1->showElement();
     Collector::showCollector();
-
+    List1->insert(10);
+    List1->showElement();
+    List1->deleteElement(10);
+    Collector::showCollector();
 
 }

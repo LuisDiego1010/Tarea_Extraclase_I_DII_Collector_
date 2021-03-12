@@ -138,7 +138,7 @@ void Collector::showCollector() {
     }
     Node *temp=firts;
     while (temp!= nullptr){
-        cout<<"("<<i<<")->"<<temp->getValue()<<endl;
+        cout<<"{"<<i<<"}->"<<temp->getValue()<<endl;
         temp=temp->getNext();
         i++;
     }
@@ -164,20 +164,20 @@ int main() {
     List *List1 = new List();
     bool loop = true;
     while (loop){
-        cout<<"\n MAIN MENU" <<endl<<"  1. Insert element \n  2. Delete Element \n  3. Show Elements \n  4. Show Collector \n  5. Exit\n"<<endl;
+        cout<<"\n MAIN MENU" <<endl<<"  1. Insert Element \n  2. Delete Element \n  3. Show List Elements \n  4. Show Collector \n  5. Exit\n"<<endl;
         int option;
         cout<<"\nEnter an option: "; cin>>option;
         switch (option) {
             case 1:
                 int _value;
                 cout<<"\nPlease enter the number you want to insert: ";cin>>_value;
-                cout<<"\nChecking if collector is empty and inserting node"<<endl;
+                cout<<"\nChecking if collector is empty and inserting node...\n"<<endl;
                 List1->insert(_value);
                 break;
             case 2:
                 int _value2;
                 cout<<"\nPlease enter the number you want to delete: ";cin>>_value2;
-                cout<<"\nDeleting node and recycling in collector"<<endl;
+                cout<<"\nDeleting node and recycling in collector..."<<endl;
                 List1->deleteElement(_value2);
                 break;
             case 3:

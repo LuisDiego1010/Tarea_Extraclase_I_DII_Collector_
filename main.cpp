@@ -90,7 +90,7 @@ void List::showElements() {
     }
     Node *temp=firts;
     while (temp!= nullptr){
-        cout<<"["<<i<<"]->"<<*temp->value<<endl;
+        cout<<"["<<i<<"]->"<<temp->getValue()<<endl;
         temp=temp->getNext();
         i++;
     }
@@ -160,18 +160,41 @@ void Node::operator delete(void* nodeDel){
 
 //Run the program
 int main() {
+    cout<<"This program is the first extra class task of the CE2103 Computer Engineering course at Tecnológico de Costa Rica.\nWhich consists of a collector to recycle the memory freed by a list of nodes."<<endl;
     List *List1 = new List();
-    List1->insert(30);
-    List1->showElements();
-    List1->deleteElement(30);
-    List1->showElements();
-    Collector::showCollector();
-    List1->insert(10);
-    List1->showElements();
-    List1->deleteElement(10);
-    Collector::showCollector();
-    List1->showElements();
+    bool loop = true;
+    while (loop){
+        cout<<"\n MAIN MENU" <<endl<<"  1. Insert element \n  2. Delete Element \n  3. Show Elements \n  4. Show Collector \n  5. Exit\n"<<endl;
+        int option;
+        cout<<"\nEnter an option: "; cin>>option;
+        switch (option) {
+            case 1:
+                int _value;
+                cout<<"\nPlease enter the number you want to insert: ";cin>>_value;
+                cout<<"\nChecking if collector is empty and inserting node"<<endl;
+                List1->insert(_value);
+                break;
+            case 2:
+                int _value2;
+                cout<<"\nPlease enter the number you want to delete: ";cin>>_value2;
+                cout<<"\nDeleting node and recycling in collector"<<endl;
+                List1->deleteElement(_value2);
+                break;
+            case 3:
+                cout<<"\nWatching list: \n"<<endl;
+                List1->showElements();
+                break;
+            case 4:
+                cout<<"\nWatching collector: \n"<<endl;
+                Collector::showCollector();
+                break;
+            case 5:
+                cout<<"\n Thanks for use Collector app \n";
+                loop=false;
+                break;
 
-
+            default: cout<<"\nOption is not in range. Please enter a valid option\n";
+        }
+    }
     return 0;
 }

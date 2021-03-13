@@ -21,7 +21,7 @@ public:
     void setNext(Node *_next);
     Node* getNext();
     //Overload methods new and delete
-    void* operator new (size_t nodeNew);
+    void* operator new (size_t);
     void operator delete (void* nodeDel);
 };
 //Class methods
@@ -145,7 +145,7 @@ void Collector::showCollector() {
 }
 
 //Overload methods new and delete
-void* Node::operator new(size_t nodeNew){
+void* Node::operator new(size_t){
     //Lógica del new
     if (Collector::isEmpty()==NULL){
         return ::new Node(0);
@@ -189,7 +189,7 @@ int main() {
                 Collector::showCollector();
                 break;
             case 5:
-                cout<<"\n Thanks for use Collector app \n";
+                cout<<"\nThanks for use Collector app \n";
                 loop=false;
                 break;
 
